@@ -59,7 +59,7 @@ function App() {
     dataString = dataString.split("* ");
     dataString = dataString.map((item) => item.trim());
 
-    console.log(dataString);
+    // console.log(dataString);
     setResult([
       ...result,
       { type: "q", text: question ? question : selectedHistory },
@@ -76,14 +76,14 @@ function App() {
   // console.log(recentHistory);
 
   const isEnter = (event) => {
-    console.log(event.key);
+    // console.log(event.key);
     if (event.key == "Enter") {
       askQuestion();
     }
   };
 
   useEffect(() => {
-    console.log(selectedHistory);
+    // console.log(selectedHistory);
     askQuestion();
   }, [selectedHistory]);
 
