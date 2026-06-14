@@ -12,7 +12,7 @@ const RecentSearch = ({
 
   const clearSelectedHistory = (selectedItem) => {
     let history = JSON.parse(localStorage.getItem("history"));
-    console.log(history);
+    // console.log(history);
     history = history.filter((item) => {
       if (item != selectedItem) {
         return item;
@@ -20,7 +20,7 @@ const RecentSearch = ({
     });
     setRecentHistory(history);
     localStorage.setItem('history', JSON.stringify(history))
-    console.log(history)
+    // console.log(history)
   };
 
   return (
